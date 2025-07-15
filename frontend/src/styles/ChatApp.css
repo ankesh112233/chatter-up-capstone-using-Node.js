@@ -1,0 +1,151 @@
+/* ChatApp.css */
+
+/* Base container */
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #e5ddd5;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Chat window */
+  .chat-window {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+    background: url('/chat-bg.png'); /* optional */
+    background-size: cover;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  /* Online users panel */
+  .online-users {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .online-users h3 {
+    margin-top: 0;
+    background-color: #1976d2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .user-item {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 10px;
+  }
+  
+  /* Chat messages */
+  .message {
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .message-content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message.self .message-content {
+    background-color: #dcf8c6;
+    margin-left: auto;
+  }
+  
+  /* Footer */
+  .message-input {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .message-input button {
+    margin-left: 10px;
+    padding: 0 20px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Typing indicator */
+  .typing-indicator {
+    font-style: italic;
+    color: gray;
+    padding: 5px 10px;
+  }
+  
+  /* Welcome message */
+  .welcome-message {
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .chat-container {
+      flex-direction: column;
+    }
+  
+    .online-users {
+      order: -1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 5px;
+      font-size: 14px;
+    }
+  
+    .chat-window {
+      flex: 1;
+    }
+  
+    .message-content {
+      max-width: 85%;
+    }
+  
+    .message-input input {
+      font-size: 14px;
+    }
+  
+    .message-input button {
+      font-size: 14px;
+    }
+  }
+  

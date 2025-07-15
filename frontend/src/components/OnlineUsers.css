@@ -1,0 +1,40 @@
+.online-users {
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 1px solid #ddd;
+    width: 200px;
+  }
+  
+  .online-users h4 {
+    margin-bottom: 10px;
+  }
+  
+  .online-users ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .online-users li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .online-users .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .status-dot {
+    margin-left: auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .status-dot.green {
+    background-color: green;
+  }
+  

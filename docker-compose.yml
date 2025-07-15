@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - DB_URI=mongodb://mongo:27017/chatterup
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - chatterup-db:/data/db
+volumes:
+  chatterup-db:
